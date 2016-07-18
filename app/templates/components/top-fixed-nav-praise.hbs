@@ -1,0 +1,53 @@
+<div class="black_theme top_nav_praise" id="top_nav">
+	{{#bs-nav type="pills"}}
+		{{#bs-nav-item id="praise_nav_choose" }}
+			{{#link-to "independence.choosecity"}}
+				<span class="bottom_triangle">{{currentCity}}</span>
+			{{/link-to}}
+		{{/bs-nav-item}}
+		{{#bs-nav-item id="praise_nav_input"}}
+			{{#link-to "independence.praisesearch"}}
+				{{bs-input type="text" value=firstname placeholder="请入商家、品类"}}
+			{{/link-to}}
+		{{/bs-nav-item}}
+		{{#bs-nav-item id="praise_nav_more"}}
+			{{#bs-dropdown}}
+				{{#bs-dropdown-toggle}}
+					<i class="iconfont icon-tianjia"></i>
+				{{/bs-dropdown-toggle}}
+				{{#bs-dropdown-menu}}
+					<li>
+						{{#link-to "friend.all"}}
+							<i class="iconfont icon-wode"></i>
+							添加朋友
+						{{/link-to}}
+					</li>
+					<li>
+						{{#link-to "friend.all"}}
+							<i class="iconfont icon-tianjialeimu"></i>
+							发起群聊
+						{{/link-to}}
+					</li>
+					<li>
+						{{#link-to "friend.all"}}
+							<i class="iconfont icon-saoyisao"></i>
+							扫一扫
+						{{/link-to}}
+					</li>
+					<li>
+						{{#link-to "friend.all"}}
+							<i class="iconfont icon-fukuanma"></i>
+							我的二维码/收款
+						{{/link-to}}
+					</li>
+					<li>
+						{{#link-to "friend.all"}}
+							<i class="iconfont icon-bangzhuxiantiao"></i>
+							使用帮助
+						{{/link-to}}
+					</li>
+				{{/bs-dropdown-menu}}
+			{{/bs-dropdown}}
+		{{/bs-nav-item}}
+	{{/bs-nav}}
+</div>

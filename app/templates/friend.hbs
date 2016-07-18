@@ -1,0 +1,42 @@
+{{top-fixed-nav}}
+
+<!-- 模块-可滑动部分 -->
+<!-- friend主体内容 -->
+
+<div class="main_body" id="friend_body_content">
+	
+	<!-- 顶部生活圈 -->
+	<div class="container bottom_10" id="friend_top">
+		<div class="row">
+			<div class="col-xs-3">
+				<img src="assets/img/life1.png" alt="">
+			</div>
+			<div class="col-xs-7">
+				生活圈
+			</div>
+			<div class="col-xs-2">
+				<img src="assets/img/life2.png" alt="">
+			</div>
+		</div>
+	</div>
+
+	<!-- 好友列表 -->
+	<div class="container bottom_10" id="friend_list">
+		<ul class="list-group">
+			{{#each model.friends as |friend|}}
+				<li class="row">
+					<div class="col-xs-3">
+						<img class="friend_img" src="assets/img/{{friend.imgSrc}}" />
+					</div>
+					<div class="friend_detail col-xs-9">
+						<h5>
+							<span class="friend_name col-xs-9">{{friend.name}}</span>
+							<span class="last_time col-xs-3">{{friend.lasttime}}</span>
+						</h5>
+						<p class="friend_detail">{{friend.detail}}</p>
+					</div>
+				</li>
+			{{/each}}
+		</ul>
+	</div>
+</div>

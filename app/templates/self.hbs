@@ -1,0 +1,99 @@
+{{top-fixed-nav showbill=true}}
+
+<!-- 模块-可滑动部分 -->
+<!-- self主体内容 -->
+
+<div class="main_body" id="self_body_content">
+	
+	<!-- 信息总览 -->
+	<div class="container bottom_10" id="self_top">
+		<div class="row">
+			<div class="col-xs-3">
+				<img src="assets/img/icon6.png" alt="">
+			</div>
+			<div class="col-xs-9" id="self_info">
+				<h5>{{model.nickname}}</h5>
+				<p>{{model.usercode}}</p>
+				<ul id="self_fast">
+					{{#each model.fastItems as |fastItem|}}
+						{{#link-to fastItem.route}}
+							<li>
+								<i class="iconfont {{fastItem.icon}}"></i>
+								<span class="fast_item">{{fastItem.name}}</span>
+							</li>
+						{{/link-to}}
+					{{/each}}
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- 账户总览 -->
+	<div class="container" id="self_total">
+		<div class="row">
+			<div class="col-xs-6" id="total_left">
+				<span id="sum_money">*****</span>
+				<span class="glyphicon glyphicon-eye-open" id="show_icon"></span>
+			</div>
+			<div class="col-xs-6" id="total_right">
+				<span class="blue_text">账户安全保障中</span>
+				<span class="glyphicon glyphicon-chevron-right"></span>
+			</div>
+		</div>
+	</div>
+
+	<!-- 账户信息 -->
+	<div id="self_account">
+		<!-- 列表一 -->
+		<div class="container bottom_10">
+			<ul class="row account_tb">
+				{{#each model.accountItems.tb1 as |accountItem|}}
+					<li class="col-xs-6">
+						<div class="col-xs-5 account_tb_icon">
+							<i class="iconfont {{accountItem.icon}} {{accountItem.color}}_text"></i>
+						</div>	
+						<div class="col-xs-7 account_tb_detail">
+							<h5>{{accountItem.name}}</h5>
+							<p>{{accountItem.detail}}</p>
+						</div>
+					</li>
+				{{/each}}
+			</ul>
+
+		</div>
+
+		<!-- 列表二 -->
+		<div class="container bottom_10">
+			<ul class="row account_tb">
+				{{#each model.accountItems.tb2 as |accountItem|}}
+					<li class="col-xs-6">
+						<div class="col-xs-5 account_tb_icon">
+							<i class="iconfont {{accountItem.icon}} {{accountItem.color}}_text"></i>
+						</div>	
+						<div class="col-xs-7 account_tb_detail">
+							<h5>{{accountItem.name}}</h5>
+							<p>{{accountItem.detail}}</p>
+						</div>
+					</li>
+				{{/each}}
+			</ul>
+		</div>
+
+		<!-- 列表三 -->
+		<div class="container bottom_10">
+			<ul class="row account_tb">
+				{{#each model.accountItems.tb3 as |accountItem|}}
+					<li class="col-xs-6">
+						<div class="col-xs-5 account_tb_icon">
+							<i class="iconfont {{accountItem.icon}} {{accountItem.color}}_text"></i>
+						</div>	
+						<div class="col-xs-7 account_tb_detail">
+							<h5>{{accountItem.name}}</h5>
+							<p>{{accountItem.detail}}</p>
+						</div>
+					</li>
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+</div>

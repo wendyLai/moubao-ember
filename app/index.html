@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Moubao</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="utf-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!-- 让视口的宽度=设备的物理分辨率，初始的缩放比例为1 移动设备 -->
+  <meta name ="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Moubao</title>
+  <!--[if lt IE 9]>
+  <script src="assets/supportJS/respond.min.js"></script>
+  <script src="assets/supportJS/html5shiv.js"></script>
+  <![endif]-->
+  {{content-for "head"}}
 
-    {{content-for "head"}}
+  <link rel="stylesheet" href="assets/vendor.css">
+  <link rel="stylesheet" href="assets/moubao.css">
 
-    <link rel="stylesheet" href="assets/vendor.css">
-    <link rel="stylesheet" href="assets/moubao.css">
+  {{content-for "head-footer"}}
 
-    {{content-for "head-footer"}}
-  </head>
-  <body>
-    {{content-for "body"}}
+</head>
 
-    <script src="assets/vendor.js"></script>
-    <script src="assets/moubao.js"></script>
+<body>
 
-    {{content-for "body-footer"}}
-  </body>
+  {{content-for "body"}}
+
+  <script src="assets/vendor.js"></script>
+  <script src="assets/moubao.js"></script>
+
+  {{content-for "body-footer"}}
+
+</body>
+
 </html>

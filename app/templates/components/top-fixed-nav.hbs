@@ -1,0 +1,61 @@
+<div class="container black_theme" id="top_nav">
+	<div class="row">
+		{{#bs-nav type="pills"}}
+			{{#bs-nav-item class="col-xs-7"}}
+				{{#if showbill}}
+					{{#link-to "independence.bill"}}
+						<i class="iconfont icon-liebiao"></i>
+						账单
+					{{/link-to}}
+				{{/if}}
+			{{/bs-nav-item}}
+			{{#bs-nav-item class="col-xs-5 btns_group"}}
+				<div class="col-xs-4">
+					{{#link-to "friend.all"}}<i class="iconfont icon-shejiao"></i>{{/link-to}}
+				</div>
+				<div class="col-xs-4">
+					{{#link-to "independence.search"}}<i class="iconfont icon-sousuo"></i>{{/link-to}}
+				</div>
+				<div class="col-xs-4">
+					{{#bs-dropdown}}
+						{{#bs-dropdown-toggle}}
+							<i class="iconfont icon-tianjia"></i>
+						{{/bs-dropdown-toggle}}
+						{{#bs-dropdown-menu}}
+							<li>
+								{{#link-to "friend.all"}}
+									<i class="iconfont icon-wode"></i>
+									添加朋友
+								{{/link-to}}
+							</li>
+							<li>
+								{{#link-to "friend.all"}}
+									<i class="iconfont icon-tianjialeimu"></i>
+									发起群聊
+								{{/link-to}}
+							</li>
+							<li>
+								{{#link-to "friend.all"}}
+									<i class="iconfont icon-saoyisao"></i>
+									扫一扫
+								{{/link-to}}
+							</li>
+							<li>
+								{{#link-to "friend.all"}}
+									<i class="iconfont icon-fukuanma"></i>
+									我的二维码/收款
+								{{/link-to}}
+							</li>
+							<li>
+								{{#link-to "friend.all"}}
+									<i class="iconfont icon-bangzhuxiantiao"></i>
+									使用帮助
+								{{/link-to}}
+							</li>
+						{{/bs-dropdown-menu}}
+					{{/bs-dropdown}}
+				</div>
+			{{/bs-nav-item}}
+		{{/bs-nav}}
+	</div>
+</div>

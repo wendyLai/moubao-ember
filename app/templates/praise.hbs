@@ -1,0 +1,50 @@
+<!-- 模块-固定在顶部 -->
+{{top-fixed-nav-praise currentCity="北京"}}
+
+<!-- 模块-可滑动部分 -->
+<!-- praise主体内容 -->
+<div id="praise_body_content" class="main_body">
+
+	<!--  模块-分类 -->
+	<div class="container bottom_10" id="praise_classify">
+		<ul class="row">
+			{{#each model.classifyItems as |classifyItem|}}
+				<li class="col-xs-3" title={{topTbItem.name}}>
+					<i class="iconfont {{classifyItem.icon}} {{classifyItem.color}}_text"></i>
+					<br/>{{classifyItem.name}}
+				</li>
+			{{/each}}
+		</ul>
+	</div>
+
+	<!--  模块-列表 -->
+	
+	<div class="container bottom_10" id="praise_list">
+		<ul class="list-group">
+			{{#each model.listItems as |listItem|}}
+				<li class="row">
+					<div class="col-xs-4">
+						<img class="list_img" src="assets/img/{{listItem.imgSrc}}" />
+					</div>
+					<div class="list_detail col-xs-8">
+						<h5 class="list_title">{{listItem.title}}</h5>
+						<p class="list_star">
+							{{#each listItem.stars as |star|}}
+								{{#if star}}
+									<span class="glyphicon glyphicon-star yellow_text"></span>
+								{{else}}	
+									<span class="glyphicon glyphicon-star-empty yellow_text"></span>
+								{{/if}}
+							{{/each}}
+						</p>
+						<p class="list_address">
+							<span class="shop_address">{{listItem.address}}</span>
+							<span class="shop_distance">{{listItem.distance}}</span>
+						</p>
+					</div>
+				</li>
+			{{/each}}
+		</ul>
+	</div>
+	 
+</div>

@@ -1,0 +1,13 @@
+{{outlet}}
+<div class="container"  id="page_nav">
+	<div class="row">
+		{{#each model as |pageNav|}}
+			{{#link-to pageNav.route class="col-xs-3"}}
+				<i class="iconfont {{pageNav.icon}}"></i>
+				<br/>
+				 {{pageNav.name}}
+			{{/link-to}}
+		{{/each}}
+	</div>
+</div>
+
